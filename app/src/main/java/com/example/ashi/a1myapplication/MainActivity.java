@@ -55,10 +55,10 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         //NOTE:  Checks first item in the navigation drawer initially
-        navigationView.setCheckedItem(R.id.aboutus);
+        navigationView.setCheckedItem(R.id.prodigy);
         //NOTE:  Open fragment1 initially.
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frames, new AboutUs());
+        ft.replace(R.id.frames, new Prodigy());
         ft.commit();
     }
 
