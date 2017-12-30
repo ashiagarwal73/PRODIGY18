@@ -5,32 +5,32 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/About"
+            android:id="@+id/aboutus"
             android:title="About us" />
         <item
-            android:id="@+id/events"
+            android:id="@+id/prodigy"
             android:title="Prodigy 18" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/gallery"
             android:title="Gallery" />
 
         <item
             android:id="@+id/register"
             android:title="Register" />
         <item
-            android:id="@+id/Live"
+            android:id="@+id/liveupdates"
             android:title="Live Updates" />
         <item
-            android:id="@+id/Projects"
+            android:id="@+id/projects"
             android:title="Projects" />
         <item
-            android:id="@+id/Departments"
+            android:id="@+id/departments"
             android:title="Departments" />
         <item
-            android:id="@+id/Member"
+            android:id="@+id/membership"
             android:title="Membership" />
         <item
-            android:id="@+id/Conact"
+            android:id="@+id/conactus"
             android:title="Contact Us" />
     </group>
 
