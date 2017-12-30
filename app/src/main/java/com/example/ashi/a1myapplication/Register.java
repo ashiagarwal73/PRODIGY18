@@ -7,18 +7,28 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 public class Register extends Fragment {
     private OnFragmentInteractionListener mListener;
+    Button submit;View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        view= inflater.inflate(R.layout.fragment_register, container, false);
         // Inflate the layout for this fragment
         if (mListener != null) {
             mListener.onFragmentInteraction("Register");
         }
-        return inflater.inflate(R.layout.fragment_register, container, false);
+        submit=view.findViewById(R.id.submit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
