@@ -1,6 +1,7 @@
 package com.example.ashi.a1myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -25,6 +26,8 @@ public class Register extends Fragment {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),AfterRegistration.class);
+                startActivity(intent);
 
             }
         });
