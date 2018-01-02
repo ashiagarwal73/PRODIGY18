@@ -14,23 +14,23 @@ import com.squareup.picasso.Picasso;
  * Created by Ashi on 24-11-2017.
  */
 
-public class CustomAdapter extends BaseAdapter {
+public class Customadapter2 extends BaseAdapter {
     LayoutInflater layoutInflater;
     Context context;
-    String[] names;
-    TextView textView;
-    String[] images;
-    ImageView imageView;
-    public CustomAdapter(Context context, String[] names, String[] images)
+//    String[] names;
+//    TextView textView;
+      String[] images;
+      ImageView imageView;
+    public Customadapter2(Context context/*, /*String[] names*/, String[] images)
     {
         this.context=context;
         this.images=images;
-        this.names=names;
+        //this.names=names;
         layoutInflater=(LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
     }
     @Override
     public int getCount() {
-        return names.length;
+        return images.length;
     }
     @Override
     public Object getItem(int i) {
@@ -43,10 +43,10 @@ public class CustomAdapter extends BaseAdapter {
     }
     @Override
     public View getView(int i, View convertview, ViewGroup viewGroup) {
-        convertview=layoutInflater.inflate(R.layout.customadapter,null);
-        textView=convertview.findViewById(R.id.adaptertext);
-        textView.setText(names[i]);
-        imageView=convertview.findViewById(R.id.adapterimage);
+        convertview=layoutInflater.inflate(R.layout.customadapter2,null);
+     //   textView=convertview.findViewById(R.id.adaptertext);
+     //   textView.setText(names[i]);
+       imageView=convertview.findViewById(R.id.adapterimage2);
         Picasso.with(context)
                 .load(images[i])
                 .resize(200,200)
@@ -54,6 +54,7 @@ public class CustomAdapter extends BaseAdapter {
                 .placeholder(R.drawable.galleryicon)
                 .noFade()
                 .into(imageView);
+      //imageView.setImageResource(images[i]);
         return convertview;
     }
 }
