@@ -21,7 +21,9 @@
         </activity>
         <activity android:name=".AfterRegistration" />
         <activity android:name=".Gallery_images" />
-        <activity android:name=".Full_screen_image"></activity>
+        <activity android:name=".Full_screen_image"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

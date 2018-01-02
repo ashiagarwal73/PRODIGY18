@@ -17,7 +17,7 @@ import java.io.IOException;
  */
 public class MyAsync extends AsyncTask<String,Void,String> {
     Context context;
-    ProgressBar progressBar;
+    //ProgressBar progressBar;
     //TextView textView;
     public MyAsync(Context context/*, ProgressBar progressBar*/)
     {
