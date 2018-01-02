@@ -3,20 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <ImageView
         android:layout_width="170dp"
         android:layout_height="170dp"
-        android:id="@+id/adapterimage"
+        android:id="@+id/adapterimage2"
         />
-
-    <TextView
-        android:id="@+id/adaptertext"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="#000"
-         />
 </LinearLayout>
