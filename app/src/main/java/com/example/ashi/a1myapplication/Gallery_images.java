@@ -1,16 +1,23 @@
 package com.example.ashi.a1myapplication;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +34,9 @@ public class Gallery_images extends AppCompatActivity {
         String album_name=intent.getStringExtra("album");
         album_name=album_name.replaceAll(" ","%20");
         GridView gridView=findViewById(R.id.gridview1);
-        MyAsync2 my = new MyAsync2(Gallery_images.this/*, progressBar2*/,gridView);
+        ProgressBar progressBar=findViewById(R.id.progress);
+        if(isOnline()){
+        MyAsync2 my = new MyAsync2(Gallery_images.this, progressBar,gridView);
         my.execute("http://upesacm.org/ACM_App/images.php?name="+album_name);
 ////        try {
 ////            image=my.get();
@@ -53,5 +62,27 @@ public class Gallery_images extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
+    }}
+    public boolean isOnline() {
+        ConnectivityManager conMgr = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = conMgr.getActiveNetworkInfo();
+
+        if(netInfo == null || !netInfo.isConnected() || !netInfo.isAvailable()){
+            Toast.makeText(this, "No Internet connection!", Toast.LENGTH_SHORT).show();
+            AlertDialog.Builder ad=new AlertDialog.Builder(this);
+            ad.setTitle("No Internet!");
+            ad.setMessage("Check your Internet connection and restart the app");
+            ad.setNegativeButton(android.R.string.cancel, null);
+            ad.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    }
+            ).create().show();
+
+            return false;
+        }
+        return true;
     }
 }

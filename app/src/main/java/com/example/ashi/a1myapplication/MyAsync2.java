@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.ashi.a1myapplication.CustomAdapter;
@@ -28,18 +29,18 @@ public class MyAsync2 extends AsyncTask<String,Void,String> {
     GridView gridView;
     String result2;
     String output1[]=null;
-    //ProgressBar progressBar;
+    ProgressBar progressBar;
     //TextView textView;
-    public MyAsync2(Context context/*, ProgressBar progressBar*/, GridView gridView)
+    public MyAsync2(Context context, ProgressBar progressBar, GridView gridView)
     {
         this.context=context;
         this.gridView=gridView;
-        /*this.progressBar=progressBar;*/
+        this.progressBar=progressBar;
         //this.textView=textView;
     }
     @Override
     protected void onPreExecute() {
-//        progressBar.setProgress(0);
+        progressBar.setProgress(0);
         super.onPreExecute();
     }
     @Override
@@ -64,9 +65,14 @@ public class MyAsync2 extends AsyncTask<String,Void,String> {
     }
 
     @Override
-    protected void  onPostExecute(String s) {
+    protected void onProgressUpdate(Void... values) {
+        progressBar.setProgress(50);
+    }
 
-        /*progressBar.setVisibility(View.INVISIBLE);*/
+    @Override
+    protected void  onPostExecute(String s) {
+        progressBar.setProgress(100);
+        progressBar.setVisibility(View.INVISIBLE);
         try {
             output1=s.split("#111#");
             Customadapter2 customAdapter=new Customadapter2(context,output1);

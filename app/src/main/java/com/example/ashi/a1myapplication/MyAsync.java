@@ -24,19 +24,19 @@ public class MyAsync extends AsyncTask<String,Void,String> {
     GridView gridView;
     String result2;
     String output1[]=null;
-    //ProgressBar progressBar;
+    ProgressBar progressBar;
     //TextView textView;
-    public MyAsync(Context context/*, ProgressBar progressBar*/, GridView gridView)
+    public MyAsync(Context context, ProgressBar progressBar, GridView gridView)
     {
         this.context=context;
         this.gridView=gridView;
-        /*this.progressBar=progressBar;*/
+        this.progressBar=progressBar;
         //this.textView=textView;
     }
 
     @Override
     protected void onPreExecute() {
-//        progressBar.setProgress(0);
+        progressBar.setProgress(0);
         super.onPreExecute();
     }
 
@@ -76,14 +76,19 @@ public class MyAsync extends AsyncTask<String,Void,String> {
     }
 
     @Override
-    protected void  onPostExecute(String s) {
+    protected void onProgressUpdate(Void... values) {
+        progressBar.setProgress(50);
+    }
 
-        /*progressBar.setVisibility(View.INVISIBLE);*/
+    @Override
+    protected void  onPostExecute(String s) {
+        progressBar.setProgress(100);
+        progressBar.setVisibility(View.INVISIBLE);
 
         String output2[]=null;
         try {
             output1=s.split("#111#");
-            output2=result2.split("#111");
+            output2=result2.split("#111#");
             CustomAdapter customAdapter=new CustomAdapter(context,output1,output2);
             gridView.setAdapter(customAdapter);
             gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
