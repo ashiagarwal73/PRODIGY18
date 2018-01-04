@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#EEEEEE"
+    android:background="@drawable/background"
     tools:context="com.example.ashi.a1myapplication.Register">
 
     <!-- TODO: Update blank fragment layout -->

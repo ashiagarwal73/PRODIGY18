@@ -15,8 +15,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="#000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:text="Thank You for registration please proceed for payment !"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount to be Paid : "
+        android:textSize="18sp"
+        android:textColor="#000"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,14 +33,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="#000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:text="Paytm at:   "/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="#1247f5"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:text="+91 8279825702"/>
     </LinearLayout>
     <TextView
@@ -42,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="#000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:text="Or Scan the QR Code Below" />
 
     <ImageView
@@ -58,13 +64,14 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:background="#fff"
+        android:textSize="18sp"
         android:text="Click to Pay"
         android:id="@+id/pay"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#ec0105"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_marginTop="20dp"
         android:text="Come Back!
  Enter your Transaction id,to Confirm your Registration !"/>
@@ -77,7 +84,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textSize="18sp"
         android:layout_marginTop="10dp"
         android:text="Submit"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Please confirm Transaction Id before Submmisson!"/>
 </LinearLayout>
 </ScrollView>
