@@ -8,12 +8,12 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:id="@+id/adapterimage"
-        android:src="@mipmap/acmlogo"
         />
     <TextView
         android:id="@+id/adaptertext"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="#000"

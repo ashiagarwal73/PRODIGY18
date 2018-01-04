@@ -1,6 +1,7 @@
 package com.example.ashi.a1myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -28,7 +29,9 @@ public class Departments extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Intent intent=new Intent(getContext(),Full_department_info.class);
+                intent.putExtra("position",position);
+                startActivity(intent);
             }
         });
         return view;
