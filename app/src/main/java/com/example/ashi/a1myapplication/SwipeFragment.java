@@ -11,6 +11,8 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
+import uk.co.senab.photoview.PhotoViewAttacher;
+
 /**
  * Created by shivam on 21/12/17.
  */
@@ -37,6 +39,9 @@ public class SwipeFragment extends Fragment {
                 .placeholder(R.drawable.galleryicon)
                 .noFade()
                 .into(imageView);
+        PhotoViewAttacher pAttacher;
+        pAttacher = new PhotoViewAttacher(imageView);
+        pAttacher.update();
         return view;
     }
 //    public static SwipeFragment getName(String name,String title)
