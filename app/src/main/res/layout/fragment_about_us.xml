@@ -1,14 +1,165 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
     tools:context="com.example.ashi.a1myapplication.AboutUs">
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="220dp">
+
+          <ImageView
+            android:id="@+id/about_upes_acm_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="190dp"
+            android:src="@drawable/about_acm_final1" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="40dp"
+              android:id="@+id/heading"
+              android:textColor="#FFF"
+              android:textStyle="bold"
+              android:fontFamily="sans-serif-smallcaps"
+              android:textSize="22sp"
+              android:layout_gravity="center"
+              android:layout_marginLeft="4dp"
+              android:text="Where It All Begins"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+         <TextView
+             android:id="@+id/starting"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textStyle="bold"
+             android:lineSpacingExtra="4dp"
+             android:textColor="#FFF"
+             android:height="130dp"
+             android:layout_marginLeft="5dp"
+             android:text="The ACM student chapter at UPES, Dehradun, India is a unique amalgamation of aspiration, hard work and productive work structure. With members dedicated towards achieving perfection, sincerity is an imbibed trait."
+             />
+
+
+      </LinearLayout>
+
+      <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thisis about us page"/>
-</LinearLayout>
+        android:orientation="vertical">
+
+          <TextView
+            android:id="@+id/a_humble_beginning"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="From Humble Beginning"
+            android:textColor="#FFF"
+            android:layout_marginLeft="4dp"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="22dp"/>
+
+      </LinearLayout>
+
+
+      <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="230dp"
+             android:id="@+id/more_about"
+             android:textStyle="bold"
+             android:lineSpacingExtra="4dp"
+             android:textColor="#FFF"
+             android:layout_marginLeft="5dp"
+             android:text="UPES-ACM Student Chapter started its activity from April 2010 by organizing a Poster Presentation competition on the theme ‘IT Applications in Energy Sectors’. We also organized Paper Presentation competition on “Green Computing” besides community program in the year 2010 and 2011 for Computer Awareness. We participated in this program and taught computer skills to students from nearby village schools organized by Corporate Social Responsibility cell of the University."/>
+
+      </LinearLayout>
+
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+          <ImageView
+              android:id="@+id/wisdom"
+              android:layout_width="420dp"
+              android:layout_height="380dp"
+              android:background="@drawable/wisdom"/>
+
+        </LinearLayout>
+
+
+       <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+         <ImageView
+             android:id="@+id/balance"
+             android:layout_width="wrap_content"
+             android:layout_height="290dp"
+             android:background="@drawable/balance"/>
+       </LinearLayout>
+
+       <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+         <ImageView
+             android:id="@+id/community"
+             android:layout_width="wrap_content"
+             android:layout_height="400dp"
+             android:background="@drawable/community2" />
+
+       </LinearLayout>
+
+       <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+         <ImageView
+             android:id="@+id/duty"
+             android:layout_width="wrap_content"
+             android:layout_height="310dp"
+             android:background="@drawable/duty"/>
+
+       </LinearLayout>
+
+       <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="240dp"
+             android:id="@+id/eye"
+             android:background="@drawable/eye"/>
+
+       </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
