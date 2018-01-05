@@ -7,36 +7,34 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Full_screen_image extends AppCompatActivity {
+public class Full_department_info extends AppCompatActivity {
+    String[] department={"Events","Promotions","App Development","Web Development"};
+    int[] images_department={R.drawable.ic_launcher_background,R.drawable.ic_launcher_background,R.drawable.ic_launcher_background,R.drawable.ic_launcher_background};
     ViewPager mViewPager;
     List<Details> mDetails = new ArrayList<>();
     Details[] details=new Details[200];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_full_screen_image);
+        setContentView(R.layout.activity_full_department_info);
+        Intent intent=getIntent();
+        int position=intent.getIntExtra("position",0);
+
         mViewPager=(ViewPager)findViewById(R.id.viewpager);
-        Intent in=getIntent();
-        Bundle b= in.getExtras();
-        String[] images=b.getStringArray("images");
-        int pos=b.getInt("position");
-        for(int j=pos;j<images.length;j++) {
+        for(int j=position;j<department.length;j++) {
             details[j] = new Details();
-            details[j].setImage(images[j]);
+            details[j].set_id_Image(images_department[j]);
+            details[j].setImage_name(department[j]);
             mDetails.add(details[j]);
         }
-        for(int j=0;j<pos;j++) {
+        for(int j=0;j<position;j++) {
             details[j] = new Details();
-            details[j].setImage(images[j]);
+            details[j].set_id_Image(images_department[j]);
+            details[j].setImage_name(department[j]);
             mDetails.add(details[j]);
         }
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -44,13 +42,12 @@ public class Full_screen_image extends AppCompatActivity {
             @Override
             public Fragment getItem(int position) {
                 Details details3= mDetails.get(position);
-                return SwipeFragment.getImage(details3.getImage());
+                return SwipeFragment2.getImage(details3.get_id_Image(),details3.getImage_name());
             }
             @Override
             public int getCount() {
                 return mDetails.size();
             }
         });
-
     }
 }
