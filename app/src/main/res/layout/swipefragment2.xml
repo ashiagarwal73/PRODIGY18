@@ -8,12 +8,15 @@
     android:orientation="vertical">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="200dp"
         android:id="@+id/department_image"
         android:src="@mipmap/acmlogo"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:textStyle="bold"
         android:id="@+id/department_name"/>
 </LinearLayout>
 </ScrollView>

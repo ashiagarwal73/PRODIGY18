@@ -13,8 +13,8 @@ import android.widget.ListView;
 
 public class Departments extends Fragment {
     private OnFragmentInteractionListener mListener;
-    String[] department={"Events","Promotions","App Development","Web Development"};
-    int[] department_images={R.drawable.ic_launcher_background,R.drawable.ic_launcher_background,R.drawable.ic_launcher_background,R.drawable.ic_launcher_background};
+    String[] department={"Editorial","Design","Public Relations","Events","Technical"};
+    int[] department_images={R.drawable.editorial_img,R.drawable.design_img,R.drawable.pr_img,R.drawable.ic_launcher_background,R.drawable.ic_launcher_background};
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
