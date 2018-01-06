@@ -18,9 +18,18 @@ public class Full_department_info extends AppCompatActivity {
             "The Public Relations team is mainly concerned about advertisements of the events , gathering sponsors and all that.It is through their public speaking skills along with the talent of convincing people makes all of it go possible .",
             "The Events Team is responsible for managing the entire contributors and is able to make everyone work together. It is they who set goals for all others to fulfill . They are the ones who comes up with new ideas ans the skills of handling those and even making them a success",
             "The Technical Team has a major role to play in enhancing coding skills. The team trains people on how to improvize on their technical skills as well as handles the technical part of an event, be it an app or a web development.",
-            "this ia about vfx team"};
-    String[] title={"Editorial","Design","Public Relations","Events","Technical","VFX"};
-    int[] images_department={R.drawable.editorial_img,R.drawable.design_img,R.drawable.pr_img,R.drawable.ic_launcher_background,R.drawable.technical_img,R.drawable.vfx_img};
+            "this ia about vfx team",
+            "this is about csr",
+            "this is about membership"};
+    String[] title={"Editorial Team","Design Team","Public Relations","Events","Technical","VFX","CSR","Membership"};
+    int[] images_department={R.drawable.editorial_img,
+            R.drawable.design_img,
+            R.drawable.pr_img,
+            R.drawable.ic_launcher_background,
+            R.drawable.technical_img,
+            R.drawable.vfx_img,
+            R.drawable.csr_img,
+            R.drawable.member};
     String[] heads;
     ViewPager mViewPager;
     List<Details> mDetails = new ArrayList<>();
@@ -65,8 +74,6 @@ public class Full_department_info extends AppCompatActivity {
             public int getCount() {
                 return mDetails.size();
             }
-
-
         });
     }
 }

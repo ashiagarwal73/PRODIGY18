@@ -16,8 +16,9 @@ public class Departments extends Fragment {
     private OnFragmentInteractionListener mListener;
     TextView textView;
     String heads;
-    String[] department={"Editorial","Design","Public Relations","Events","Technical","VFX"};
-    int[] department_images={R.drawable.editorial_img,R.drawable.design_img,R.drawable.pr_img,R.drawable.ic_launcher_background,R.drawable.technical_img,R.drawable.vfx_img};
+    String[] department={"Editorial","Design","Public Relations","Events","Technical","VFX","Corporate Social Responsibility","Membership"};
+    int[] department_images={R.drawable.editorial_img,R.drawable.design_img,R.drawable.pr_img,R.drawable.ic_launcher_background,
+            R.drawable.technical_img,R.drawable.vfx_img,R.drawable.csr_img,R.drawable.member};
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
