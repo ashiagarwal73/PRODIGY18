@@ -21,17 +21,20 @@ public class Full_department_info extends AppCompatActivity {
             "this ia about vfx team"};
     String[] title={"Editorial","Design","Public Relations","Events","Technical","VFX"};
     int[] images_department={R.drawable.editorial_img,R.drawable.design_img,R.drawable.pr_img,R.drawable.ic_launcher_background,R.drawable.technical_img,R.drawable.vfx_img};
-    String[] heads={"Mr. Piyush Sharma \nMs. Nikita Duhan","Mr. Naman jain \nMr. Ayush Yadav \nMr. Avnish Gupta ","Mr. Ashwin Arora \nMr. Ankhush Sharma","Mr. Parv Singhal\nMr. Abhishek Raj\nMs.Kritika ","Mr. Shivam Shrivastav \nMr.Ashish Malhotra \nMr.Vyom Maitherya","Mr. Ayush Yadav"};
+    String[] heads;
     ViewPager mViewPager;
     List<Details> mDetails = new ArrayList<>();
     Details[] details=new Details[200];
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_department_info);
         Intent intent=getIntent();
-        int position=intent.getIntExtra("position",0);
+        Bundle b=intent.getExtras();
+        int position=b.getInt("position",0);
+        String head=b.getString("heads");
+        head=head.replaceAll("#11#","\n");
+        heads=head.split("#111#");
         mViewPager=(ViewPager)findViewById(R.id.viewpager);
         for(int j=position;j<department.length;j++) {
             details[j] = new Details();

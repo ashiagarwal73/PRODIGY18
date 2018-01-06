@@ -10,9 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class Departments extends Fragment {
     private OnFragmentInteractionListener mListener;
+    TextView textView;
+    String heads;
     String[] department={"Editorial","Design","Public Relations","Events","Technical","VFX"};
     int[] department_images={R.drawable.editorial_img,R.drawable.design_img,R.drawable.pr_img,R.drawable.ic_launcher_background,R.drawable.technical_img,R.drawable.vfx_img};
     @Override
@@ -22,7 +25,11 @@ public class Departments extends Fragment {
         if (mListener != null) {
             mListener.onFragmentInteraction("Departments");
         }
+
         View view=inflater.inflate(R.layout.fragment_departments, container, false);
+        textView= view.findViewById(R.id.heads);
+        MyAsync2 my=new MyAsync2(getContext(),null,null,null,textView);
+        my.execute("http://upesacm.org/ACM_App/heads.php");
         ListView listView=view.findViewById(R.id.departments);
         Customadapter3 customadapter3=new Customadapter3(getContext(),department,department_images);
         listView.setAdapter(customadapter3);
@@ -30,7 +37,11 @@ public class Departments extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent=new Intent(getContext(),Full_department_info.class);
-                intent.putExtra("position",position);
+                Bundle b=new Bundle();
+                b.putInt("position",position);
+                heads=textView.getText().toString();
+                b.putString("heads",heads);
+                intent.putExtras(b);
                 startActivity(intent);
             }
         });
