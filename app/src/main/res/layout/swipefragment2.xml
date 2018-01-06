@@ -52,6 +52,7 @@
         android:layout_marginStart="10dp"
         android:textSize="18sp"
         android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
         android:textColor="#000"
         android:id="@+id/department_name"/>
     </LinearLayout>
