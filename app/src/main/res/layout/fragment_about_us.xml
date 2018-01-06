@@ -2,8 +2,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,29 +11,21 @@
     android:background="@color/colorAccent"
     tools:context="com.example.ashi.a1myapplication.AboutUs">
     <!-- TODO: Update blank fragment layout -->
-
-        <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="220dp">
-
-          <ImageView
-            android:id="@+id/about_upes_acm_picture"
-            android:layout_width="wrap_content"
-            android:layout_height="190dp"
-            android:src="@drawable/about_acm_final1" />
-
-      </LinearLayout>
-
+   <ImageView
+       android:id="@+id/about_upes_acm_picture"
+       android:layout_width="wrap_content"
+       android:layout_height="190dp"
+       android:src="@drawable/about_acm_final1" />
       <LinearLayout
           android:layout_width="wrap_content"
           android:layout_height="wrap_content">
-
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="40dp"
               android:id="@+id/heading"
               android:textColor="#FFF"
               android:textStyle="bold"
+              android:layout_marginTop="10dp"
               android:fontFamily="sans-serif-smallcaps"
               android:textSize="22sp"
               android:layout_gravity="center"
@@ -152,5 +142,7 @@
              android:id="@+id/eye"
              android:background="@drawable/eye"/>
        </LinearLayout>
-    </LinearLayout>
+        </LinearLayout>
 </ScrollView>
+
+
