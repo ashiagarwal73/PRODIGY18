@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class SwipeFragment2 extends Fragment {
         String name ;
-//    String title;
+      String title;
     Context mContext;
     int id;
     @Nullable
@@ -22,15 +22,14 @@ public class SwipeFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.swipefragment2,null);
        TextView textView = (TextView)view.findViewById(R.id.department_name);
-//        TextView textView1 =(TextView)view.findViewById(R.id.txtTitle);
+        TextView textView1 =(TextView)view.findViewById(R.id.title);
         ImageView imageView=view.findViewById(R.id.department_image);
           name = getArguments().getString("desc");
-//        title = getArguments().getString("desc");
-//        textView.setText(name);
-//        textView1.setText(title);
+          title = getArguments().getString("title");
         id=getArguments().getInt("img");
         imageView.setImageResource(id);
         textView.setText(name);
+        //textView1.setText(title);
         return view;
     }
     //    public static SwipeFragment getName(String name)
@@ -42,10 +41,11 @@ public class SwipeFragment2 extends Fragment {
 //        swipeFragment.setArguments(args);
 //        return swipeFragment;
 //    }
-    public static SwipeFragment2 getImage(int id,String name) {
+    public static SwipeFragment2 getImage(int id,String name,String title) {
         Bundle args = new Bundle();
         args.putInt("img",id);
         args.putString("desc",name);
+        args.putString("title",title);
         SwipeFragment2 swipeFragment = new SwipeFragment2();
         swipeFragment.setArguments(args);
         return swipeFragment;

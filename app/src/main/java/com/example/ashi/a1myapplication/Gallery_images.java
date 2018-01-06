@@ -46,8 +46,6 @@ public class Gallery_images extends AppCompatActivity {
 ////        } catch (ExecutionException e) {
 ////            e.printStackTrace();
 ////        }
-            ActionBar actionBar = getSupportActionBar();
-            actionBar.setTitle(album_name);
 //        GridView gridView=findViewById(R.id.gridview1);
 //        Customadapter2 customadapter2=new Customadapter2(getBaseContext(),images);
 //        gridView.setAdapter(customadapter2);

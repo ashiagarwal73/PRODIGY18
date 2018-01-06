@@ -13,8 +13,8 @@ import android.widget.ListView;
 
 public class Departments extends Fragment {
     private OnFragmentInteractionListener mListener;
-    String[] department={"Editorial","Design","Public Relations","Events","Technical"};
-    int[] department_images={R.drawable.editorial_img,R.drawable.design_img,R.drawable.pr_img,R.drawable.ic_launcher_background,R.drawable.ic_launcher_background};
+    String[] department={"Editorial","Design","Public Relations","Events","Technical","VFX"};
+    int[] department_images={R.drawable.editorial_img,R.drawable.design_img,R.drawable.pr_img,R.drawable.ic_launcher_background,R.drawable.technical_img,R.drawable.vfx_img};
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,7 +36,6 @@ public class Departments extends Fragment {
         });
         return view;
     }
-
     // TODO: Rename method, update argument and hook method into UI event
     @Override
     public void onAttach(Context context) {
