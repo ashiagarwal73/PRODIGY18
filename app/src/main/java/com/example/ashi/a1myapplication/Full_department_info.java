@@ -21,23 +21,24 @@ public class Full_department_info extends AppCompatActivity {
             "this ia about vfx team"};
     String[] title={"Editorial","Design","Public Relations","Events","Technical","VFX"};
     int[] images_department={R.drawable.editorial_img,R.drawable.design_img,R.drawable.pr_img,R.drawable.ic_launcher_background,R.drawable.technical_img,R.drawable.vfx_img};
+    String[] heads={"Mr. Piyush Sharma \nMs. Nikita Duhan","Mr. Naman jain \nMr. Ayush Yadav \nMr. Avnish Gupta ","Mr. Ashwin Arora \nMr. Ankhush Sharma","Mr. Parv Singhal\nMr. Abhishek Raj\nMs.Kritika ","Mr. Shivam Shrivastav \nMr.Ashish Malhotra \nMr.Vyom Maitherya","Mr. Ayush Yadav"};
     ViewPager mViewPager;
     List<Details> mDetails = new ArrayList<>();
     Details[] details=new Details[200];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_department_info);
         Intent intent=getIntent();
         int position=intent.getIntExtra("position",0);
-
-
         mViewPager=(ViewPager)findViewById(R.id.viewpager);
         for(int j=position;j<department.length;j++) {
             details[j] = new Details();
             details[j].set_id_Image(images_department[j]);
             details[j].setImage_name(department[j]);
             details[j].setTitle(title[j]);
+            details[j].setHead(heads[j]);
             mDetails.add(details[j]);
         }
         for(int j=0;j<position;j++) {
@@ -45,6 +46,7 @@ public class Full_department_info extends AppCompatActivity {
             details[j].set_id_Image(images_department[j]);
             details[j].setImage_name(department[j]);
             details[j].setTitle(title[j]);
+            details[j].setHead(heads[j]);
             mDetails.add(details[j]);
         }
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -54,7 +56,7 @@ public class Full_department_info extends AppCompatActivity {
                 Details details3 = mDetails.get(position);
                 ActionBar actionBar = getSupportActionBar();
                 actionBar.setTitle("Departments");
-                return SwipeFragment2.getImage(details3.get_id_Image(), details3.getImage_name(),details3.getTitle());
+                return SwipeFragment2.getImage(details3.get_id_Image(), details3.getImage_name(),details3.getTitle(),details3.getHead());
             }
             @Override
             public int getCount() {

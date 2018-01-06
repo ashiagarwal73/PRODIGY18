@@ -8,6 +8,15 @@ public class Details {
     String id;
     int id_image;
 
+    public String getHead() {
+        return head;
+    }
+
+    public void setHead(String head) {
+        this.head = head;
+    }
+
+    String head;
     public String getTitle() {
         return title;
     }
