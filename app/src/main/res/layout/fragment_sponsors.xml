@@ -2,12 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ashi.a1myapplication.Projects">
+    tools:context="com.example.ashi.a1myapplication.Sponsors">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Projects" />
-
+        android:text="Sponsors" />
 </FrameLayout>

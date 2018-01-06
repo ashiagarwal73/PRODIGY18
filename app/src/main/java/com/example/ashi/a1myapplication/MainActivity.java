@@ -1,20 +1,14 @@
 package com.example.ashi.a1myapplication;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
@@ -27,7 +21,7 @@ public class MainActivity extends AppCompatActivity
         Departments.OnFragmentInteractionListener,
         LiveUpdates.OnFragmentInteractionListener,
         Membership.OnFragmentInteractionListener,
-        Projects.OnFragmentInteractionListener,
+        Sponsors.OnFragmentInteractionListener,
         NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -92,8 +86,8 @@ public class MainActivity extends AppCompatActivity
         }else if (id == R.id.conactus) {
             fragment=new ContactUs();
 
-        }else if (id == R.id.projects) {
-            fragment=new Projects();
+        }else if (id == R.id.sponsors) {
+            fragment=new Sponsors();
         }
         //NOTE: Fragment changing code
         if (fragment != null) {
