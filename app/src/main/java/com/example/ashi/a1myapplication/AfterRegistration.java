@@ -11,11 +11,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class AfterRegistration extends AppCompatActivity {
     String fullname,branch,sapid,phone,email,semester,events,acm;
     Button pay;
+    String event_name;
+    TextView amount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,16 +34,32 @@ public class AfterRegistration extends AppCompatActivity {
         events=b.getString("eve");
         acm=b.getString("acm");
         pay=findViewById(R.id.pay);
+        amount=findViewById(R.id.amount);
         if(isOnline())
         {
-        pay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=net.one97.paytm&hl=en"));
-                startActivity(i);
+            event_name=events.replaceAll(" ","%20");
+            if(acm.equals("ACM Member"))
+            {
+                MyAsync2 my=new MyAsync2(AfterRegistration.this,null,null,null,amount);
+                my.execute("http://upesacm.org/ACM_App/Event_cost_acm.php?name="+event_name);
+
             }
-        });
-        }}
+            else
+            {
+                MyAsync2 my=new MyAsync2(AfterRegistration.this,null,null,null,amount);
+                my.execute("http://upesacm.org/ACM_App/Event_cost_nacm.php?name="+event_name);
+
+            }
+            pay.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=net.one97.paytm&hl=en"));
+                    startActivity(i);
+                }
+            });
+
+        }
+    }
     public boolean isOnline() {
         ConnectivityManager conMgr = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = conMgr.getActiveNetworkInfo();

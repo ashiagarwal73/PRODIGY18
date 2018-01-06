@@ -29,7 +29,7 @@ public class SwipeFragment2 extends Fragment {
         id=getArguments().getInt("img");
         imageView.setImageResource(id);
         textView.setText(name);
-        //textView1.setText(title);
+        textView1.setText(title);
         return view;
     }
     //    public static SwipeFragment getName(String name)

@@ -53,14 +53,9 @@ public class Full_department_info extends AppCompatActivity {
             public Fragment getItem(int position) {
                 Details details3 = mDetails.get(position);
                 ActionBar actionBar = getSupportActionBar();
-                if(position==0)
-                {
-                    position=department.length;
-                }
-                actionBar.setTitle(mDetails.get(position-1).getTitle());
+                actionBar.setTitle("Departments");
                 return SwipeFragment2.getImage(details3.get_id_Image(), details3.getImage_name(),details3.getTitle());
             }
-
             @Override
             public int getCount() {
                 return mDetails.size();

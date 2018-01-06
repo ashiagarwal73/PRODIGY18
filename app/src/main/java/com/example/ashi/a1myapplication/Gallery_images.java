@@ -35,8 +35,10 @@ public class Gallery_images extends AppCompatActivity {
         album_name=album_name.replaceAll(" ","%20");
         GridView gridView=findViewById(R.id.gridview1);
         ProgressBar progressBar=findViewById(R.id.progress);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setTitle(album_name);
         if(isOnline()){
-        MyAsync2 my = new MyAsync2(Gallery_images.this, progressBar,gridView);
+        MyAsync2 my = new MyAsync2(Gallery_images.this, progressBar,gridView,null,null);
         my.execute("http://upesacm.org/ACM_App/images.php?name="+album_name);
 ////        try {
 ////            image=my.get();

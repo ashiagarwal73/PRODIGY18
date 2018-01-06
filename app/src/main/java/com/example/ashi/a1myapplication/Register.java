@@ -23,7 +23,7 @@ public class Register extends Fragment {
     Button submit;View view;
     EditText fullname,branch,sapid,phone,email;
     String[] sem={"Choose your semester","1","2","3","4","5","6","7","8"};
-    String[] eve={"Choose the Event","Event1","Event2"};
+    //String[] eve={"Choose the Event","Event1","Event2"};
     String str,str2;
     RadioGroup radioGroup;
     int c;
@@ -66,8 +66,8 @@ public class Register extends Fragment {
 
             }
         });
-        ArrayAdapter<String> aa = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_dropdown_item, eve);
-        events.setAdapter(aa);
+        MyAsync2 my=new MyAsync2(getContext(),null,null,events,null);
+        my.execute("http://upesacm.org/ACM_App/Event_name.php");
         events.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

@@ -21,8 +21,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Amount to be Paid : "
+        android:id="@+id/amount"
         android:textSize="18sp"
-        android:textColor="#000"/>
+        android:layout_marginTop="10dp"
+        android:textColor="#406bf6"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:text="Enter your Transaction id,to Confirm your Registration !"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Transaction Id "/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:text="Submit"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#f71919"
+        android:text="Please confirm Transaction Id before Submmisson!"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,30 +95,5 @@
         android:textSize="18sp"
         android:text="Click to Pay"
         android:id="@+id/pay"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#ec0105"
-        android:textSize="18sp"
-        android:layout_marginTop="20dp"
-        android:text="Come Back!
- Enter your Transaction id,to Confirm your Registration !"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter Transaction Id "/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="18sp"
-        android:layout_marginTop="10dp"
-        android:text="Submit"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="Please confirm Transaction Id before Submmisson!"/>
 </LinearLayout>
 </ScrollView>
