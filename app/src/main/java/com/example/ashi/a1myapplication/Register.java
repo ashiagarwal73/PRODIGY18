@@ -53,6 +53,7 @@ public class Register extends Fragment {
                 acm=radioButton.getText().toString();
             }
         });
+
         ArrayAdapter<String> aA = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_dropdown_item, sem);
         semester.setAdapter(aA);
         semester.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -86,6 +87,21 @@ public class Register extends Fragment {
                 if(fullname.getText().toString().equals("")||branch.getText().toString().equals("")||sapid.getText().toString().equals("")||phone.getText().toString().equals("")||email.getText().toString().equals("")||c==0||d==0)
                 {
                     Toast.makeText(getContext(), "Please fill the Details Correctly", Toast.LENGTH_LONG).show();
+                }
+                else if(!isEmailValid(email.getText().toString()))
+                {
+                    Toast.makeText(getContext(), "Enter valid email", Toast.LENGTH_SHORT).show();
+                    email.setText("");
+                }
+                else if(phone.getText().toString().length()!=10)
+                {
+                    Toast.makeText(getContext(), "Enter Valid phone number without using Country code", Toast.LENGTH_SHORT).show();
+                    phone.setText("");
+                }
+                else if(sapid.getText().toString().length()!=9)
+                {
+                    Toast.makeText(getContext(), "Enter valid Sap Id ", Toast.LENGTH_SHORT).show();
+                    sapid.setText("");
                 }
                 else
                 {
@@ -122,4 +138,7 @@ public class Register extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(String title);
     }
+    boolean isEmailValid(CharSequence email) {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email)
+                .matches();}
 }
