@@ -13,46 +13,41 @@
     <!-- TODO: Update blank fragment layout -->
    <ImageView
        android:id="@+id/about_upes_acm_picture"
-       android:layout_width="wrap_content"
-       android:layout_height="190dp"
-       android:src="@drawable/about_acm_final1" />
+       android:layout_width="match_parent"
+       android:layout_height="165dp"
+       android:src="@drawable/about_acm_final1"/>
       <LinearLayout
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content">
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
           <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="40dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
               android:id="@+id/heading"
               android:textColor="#FFF"
               android:textStyle="bold"
-              android:layout_marginTop="10dp"
+              android:padding="10dp"
               android:fontFamily="sans-serif-smallcaps"
               android:textSize="22sp"
               android:layout_gravity="center"
-              android:layout_marginLeft="4dp"
+              android:background="#7ac227"
               android:text="Where It All Begins"/>
 
       </LinearLayout>
-
       <LinearLayout
          android:layout_width="match_parent"
          android:layout_height="match_parent">
-
          <TextView
              android:id="@+id/starting"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
              android:textStyle="bold"
              android:lineSpacingExtra="4dp"
              android:textColor="#FFF"
              android:height="130dp"
-             android:layout_marginLeft="5dp"
+             android:background="#7ac227"
              android:text="The ACM student chapter at UPES, Dehradun, India is a unique amalgamation of aspiration, hard work and productive work structure. With members dedicated towards achieving perfection, sincerity is an imbibed trait."
              />
-
-
       </LinearLayout>
-
       <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,13 +61,12 @@
             android:textColor="#FFF"
             android:layout_marginLeft="4dp"
             android:textStyle="bold"
+              android:layout_marginTop="10dp"
             android:layout_gravity="left"
             android:fontFamily="sans-serif-smallcaps"
             android:textSize="22dp"/>
 
       </LinearLayout>
-
-
       <LinearLayout
          android:layout_width="wrap_content"
          android:layout_height="wrap_content">
@@ -97,7 +91,7 @@
           <ImageView
               android:id="@+id/wisdom"
               android:layout_width="420dp"
-              android:layout_height="380dp"
+              android:layout_height="250dp"
               android:background="@drawable/wisdom"/>
 
         </LinearLayout>
@@ -110,7 +104,7 @@
          <ImageView
              android:id="@+id/balance"
              android:layout_width="wrap_content"
-             android:layout_height="290dp"
+             android:layout_height="250dp"
              android:background="@drawable/balance"/>
        </LinearLayout>
 
@@ -121,7 +115,7 @@
          <ImageView
              android:id="@+id/community"
              android:layout_width="wrap_content"
-             android:layout_height="400dp"
+             android:layout_height="300dp"
              android:background="@drawable/community2" />
        </LinearLayout>
        <LinearLayout
@@ -130,7 +124,7 @@
          <ImageView
              android:id="@+id/duty"
              android:layout_width="wrap_content"
-             android:layout_height="310dp"
+             android:layout_height="280dp"
              android:background="@drawable/duty"/>
        </LinearLayout>
        <LinearLayout
