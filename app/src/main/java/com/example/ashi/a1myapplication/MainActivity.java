@@ -1,5 +1,7 @@
 package com.example.ashi.a1myapplication;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -7,6 +9,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -103,5 +106,27 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onFragmentInteraction(String title) {
         getSupportActionBar().setTitle(title);
+    }
+    public void onBackPressed() {
+        AlertDialog.Builder b=new AlertDialog.Builder(MainActivity.this);
+        b.setTitle("Close Application!");
+        b.setMessage("Do you Really want to close the App?");
+        b.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent a = new Intent(Intent.ACTION_MAIN);
+                a.addCategory(Intent.CATEGORY_HOME);
+                a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(a);
+            }
+        });
+        b.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        b.show();
+
     }
 }
