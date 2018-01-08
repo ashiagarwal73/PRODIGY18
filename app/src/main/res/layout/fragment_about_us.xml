@@ -14,8 +14,8 @@
    <ImageView
        android:id="@+id/about_upes_acm_picture"
        android:layout_width="match_parent"
-       android:layout_height="165dp"
-       android:src="@drawable/about_acm_final1"/>
+       android:layout_height="170dp"
+       android:background="@drawable/about_acm_final1"/>
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="match_parent">
@@ -44,6 +44,7 @@
              android:lineSpacingExtra="4dp"
              android:textColor="#FFF"
              android:height="130dp"
+             android:padding="10dp"
              android:background="#7ac227"
              android:text="The ACM student chapter at UPES, Dehradun, India is a unique amalgamation of aspiration, hard work and productive work structure. With members dedicated towards achieving perfection, sincerity is an imbibed trait."
              />
@@ -54,18 +55,15 @@
         android:orientation="vertical">
 
           <TextView
-            android:id="@+id/a_humble_beginning"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="From Humble Beginning"
-            android:textColor="#FFF"
-            android:layout_marginLeft="4dp"
-            android:textStyle="bold"
-              android:layout_marginTop="10dp"
-            android:layout_gravity="left"
-            android:fontFamily="sans-serif-smallcaps"
-            android:textSize="22dp"/>
-
+              android:id="@+id/a_humble_beginning"
+              android:layout_width="wrap_content"
+              android:layout_height="50sp"
+              android:fontFamily="sans-serif-smallcaps"
+              android:padding="10dp"
+              android:text="@string/from_humble_beginning"
+              android:textColor="#FFF"
+              android:textSize="22sp"
+              android:textStyle="bold" />
       </LinearLayout>
       <LinearLayout
          android:layout_width="wrap_content"
@@ -73,34 +71,25 @@
 
          <TextView
              android:layout_width="wrap_content"
-             android:layout_height="230dp"
+             android:layout_height="210dp"
              android:id="@+id/more_about"
              android:textStyle="bold"
-             android:lineSpacingExtra="4dp"
+             android:padding="10dp"
              android:textColor="#FFF"
-             android:layout_marginLeft="5dp"
              android:text="UPES-ACM Student Chapter started its activity from April 2010 by organizing a Poster Presentation competition on the theme ‘IT Applications in Energy Sectors’. We also organized Paper Presentation competition on “Green Computing” besides community program in the year 2010 and 2011 for Computer Awareness. We participated in this program and taught computer skills to students from nearby village schools organized by Corporate Social Responsibility cell of the University."/>
-
       </LinearLayout>
-
-
         <LinearLayout
           android:layout_width="wrap_content"
           android:layout_height="wrap_content">
-
           <ImageView
               android:id="@+id/wisdom"
-              android:layout_width="420dp"
-              android:layout_height="250dp"
+              android:layout_width="match_parent"
+              android:layout_height="285dp"
               android:background="@drawable/wisdom"/>
-
         </LinearLayout>
-
-
-       <LinearLayout
+        <LinearLayout
          android:layout_width="wrap_content"
          android:layout_height="wrap_content">
-
          <ImageView
              android:id="@+id/balance"
              android:layout_width="wrap_content"

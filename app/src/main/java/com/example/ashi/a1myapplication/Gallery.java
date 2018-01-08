@@ -37,8 +37,8 @@ public class Gallery extends Fragment {
         GridView gridView = view.findViewById(R.id.gridview);
         ProgressBar progressBar = view.findViewById(R.id.progress);
         if (isOnline()) {
-            MyAsync my = new MyAsync(getContext(), progressBar, gridView);
-            my.execute("http://upesacm.org/ACM_App/Album_name.php", "http://upesacm.org/ACM_App/Album_image.php");
+            MyAsync my = new MyAsync(getContext(), progressBar, gridView,"gallery");
+            my.execute("http://upesacm.org/ACM_App/Album_name.php", "http://upesacm.org/ACM_App/Album_image.php","http://upesacm.org/ACM_App/Album_name.php");
 //        MyAsync my2 = new MyAsync(getContext()/*, progressBar2*/,gridView);
 //        my2.execute("http://upesacm.org/ACM_App/Album_image.php");
 //        try {

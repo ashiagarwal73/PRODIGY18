@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_gravity="center"
-        android:layout_marginStart="150dp"
+        android:layout_centerInParent="true"
         android:visibility="visible" />
     <GridView
         android:layout_width="match_parent"

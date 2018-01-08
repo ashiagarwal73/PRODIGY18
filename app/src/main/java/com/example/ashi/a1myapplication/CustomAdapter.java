@@ -21,11 +21,13 @@ public class CustomAdapter extends BaseAdapter {
     TextView textView;
     String[] images;
     ImageView imageView;
-    public CustomAdapter(Context context, String[] names, String[] images)
+    String crop;
+    public CustomAdapter(Context context, String[] names, String[] images,String crop)
     {
         this.context=context;
         this.images=images;
         this.names=names;
+        this.crop=crop;
         layoutInflater=(LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
     }
     @Override
@@ -47,13 +49,24 @@ public class CustomAdapter extends BaseAdapter {
         textView=convertview.findViewById(R.id.adaptertext);
         textView.setText(names[i]);
         imageView=convertview.findViewById(R.id.adapterimage);
-        Picasso.with(context)
+        if(crop.equals("gallery"))
+        {Picasso.with(context)
                 .load(images[i])
                 .resize(200,200)
                 .centerCrop()
                 .placeholder(R.drawable.galleryicon)
                 .noFade()
-                .into(imageView);
+                .into(imageView);}
+        else
+        {
+            Picasso.with(context)
+                    .load(images[i])
+                    //.resize(200,200)
+                    //.centerCrop()
+                    .placeholder(R.drawable.galleryicon)
+                    .noFade()
+                    .into(imageView);
+        }
         return convertview;
     }
 }

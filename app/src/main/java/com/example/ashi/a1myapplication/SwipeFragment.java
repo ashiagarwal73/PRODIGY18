@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
@@ -18,7 +19,7 @@ import uk.co.senab.photoview.PhotoViewAttacher;
  */
 
 public class SwipeFragment extends Fragment {
-//    String name ;
+   String desc ;
 //    String title;
     Context mContext;
     String id;
@@ -29,19 +30,24 @@ public class SwipeFragment extends Fragment {
 //        TextView textView = (TextView)view.findViewById(R.id.txtHead);
 //        TextView textView1 =(TextView)view.findViewById(R.id.txtTitle);
           ImageView imageView=view.findViewById(R.id.fullimage);
+          //TextView lv =getActivity().findViewById(R.id.list);
+
 //        name = getArguments().getString("id");
 //        title = getArguments().getString("desc");
 //        textView.setText(name);
 //        textView1.setText(title);
           id=getArguments().getString("img");
+          desc=getArguments().getString("desc");
+        //lv.setText(desc);
         Picasso.with(getContext())
                 .load(id)
                 .placeholder(R.drawable.galleryicon)
                 .noFade()
                 .into(imageView);
-        PhotoViewAttacher pAttacher;
-        pAttacher = new PhotoViewAttacher(imageView);
-        pAttacher.update();
+//        PhotoViewAttacher pAttacher;
+//        pAttacher = new PhotoViewAttacher(imageView);
+//        pAttacher.update();
+        //pAttacher.setScale(0);
         return view;
     }
 //    public static SwipeFragment getName(String name)
@@ -53,9 +59,10 @@ public class SwipeFragment extends Fragment {
 //        swipeFragment.setArguments(args);
 //        return swipeFragment;
 //    }
-    public static SwipeFragment getImage(String id) {
+    public static SwipeFragment getImage(String id/*,String desc*/) {
         Bundle args = new Bundle();
         args.putString("img",id);
+        //args.putString("desc",desc);
         SwipeFragment swipeFragment = new SwipeFragment();
         swipeFragment.setArguments(args);
         return swipeFragment;

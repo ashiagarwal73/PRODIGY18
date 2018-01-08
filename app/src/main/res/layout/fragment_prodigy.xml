@@ -1,13 +1,26 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ashi.a1myapplication.Prodigy">
-
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context="com.example.ashi.a1myapplication.Gallery">
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+    <GridView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Prodigy 18" />
-
-</FrameLayout>
+        android:numColumns="2"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:padding="5dp"
+        android:id="@+id/gridview">
+    </GridView>
+</RelativeLayout>

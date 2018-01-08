@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
+import android.widget.ProgressBar;
 
 public class Prodigy extends Fragment {
 
@@ -20,9 +22,13 @@ public class Prodigy extends Fragment {
         if (mListener != null) {
             mListener.onFragmentInteraction("Prodigy 18");
         }
-        return inflater.inflate(R.layout.fragment_prodigy, container, false);
+        View view=inflater.inflate(R.layout.fragment_prodigy, container, false);
+        GridView gridView = view.findViewById(R.id.gridview);
+        ProgressBar progressBar = view.findViewById(R.id.progress);
+            MyAsync my = new MyAsync(getContext(), progressBar, gridView,"prodigy");
+            my.execute("http://upesacm.org/ACM_App/Event_name.php", "http://upesacm.org/ACM_App/poster.php","http://upesacm.org/ACM_App/Event_desc.php");
+        return view;
     }
-
     // TODO: Rename method, update argument and hook method into UI event
     @Override
     public void onAttach(Context context) {
