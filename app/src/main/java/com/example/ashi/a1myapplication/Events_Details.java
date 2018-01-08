@@ -106,15 +106,21 @@ public class Events_Details extends AppCompatActivity {
 //                your_array_list );
 //        lv.setAdapter(arrayAdapter);
         mLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
+        int x=mViewPager.getCurrentItem();
+        String[] y={mDetails.get(x).getImage_name()};
+        ListView listView=findViewById(R.id.list);
+        ArrayAdapter<String> aa=new ArrayAdapter<String>(Events_Details.this,android.R.layout.simple_list_item_1,y);
+        listView.setAdapter(aa);
         mLayout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
             @Override
             public void onPanelSlide(View panel, float slideOffset) {
                 Log.i(TAG, "onPanelSlide, offset " + slideOffset);
-                int x=mViewPager.getCurrentItem();
-                TextView textView=findViewById(R.id.list);
-                textView.setText(mDetails.get(x).getImage_name());
+//                int x=mViewPager.getCurrentItem();
+//                String[] y={mDetails.get(x).getImage_name()};
+//                ListView listView=findViewById(R.id.list);
+//                ArrayAdapter<String> aa=new ArrayAdapter<String>(Events_Details.this,android.R.layout.simple_list_item_1,y);
+//                listView.setAdapter(aa);
             }
-
             @Override
             public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState previousState, SlidingUpPanelLayout.PanelState newState) {
                 Log.i(TAG, "onPanelStateChanged " + newState);

@@ -98,7 +98,7 @@ public class Register extends Fragment {
                     Toast.makeText(getContext(), "Enter Valid phone number without using Country code", Toast.LENGTH_SHORT).show();
                     phone.setText("");
                 }
-                else if(sapid.getText().toString().length()!=9)
+                else if(sapid.getText().toString().length()!=9&&sapid.getText().toString().substring(0,3).equals("5000"))
                 {
                     Toast.makeText(getContext(), "Enter valid Sap Id ", Toast.LENGTH_SHORT).show();
                     sapid.setText("");

@@ -9,6 +9,7 @@
     sothree:umanoPanelHeight="68dp"
     sothree:umanoShadowHeight="4dp"
     sothree:umanoParallaxOffset="100dp"
+    sothree:umanoInitialState="anchored"
     sothree:umanoDragView="@+id/dragView"
     sothree:umanoOverlay="true"
     sothree:umanoScrollableView="@+id/list">
@@ -48,19 +49,16 @@
                 android:gravity="center"
                 android:paddingLeft="10dp"/>
         </LinearLayout>
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <TextView
+        <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="18sp"
             android:textColor="#000"
             android:padding="10dp"
+            android:layout_weight="1"
             >
-        </TextView>
-        </ScrollView>
+        </ListView>
         <!--<ScrollView-->
         <!--android:id="@+id/sv"-->
         <!--android:layout_width="match_parent"-->
