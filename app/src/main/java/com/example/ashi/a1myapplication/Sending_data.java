@@ -25,7 +25,6 @@ class Sending_data extends AsyncTask<String,TextView,String> {
         this.context=context;
         //mText=Text;
         this.inserted=inserted;
-
     }
     @Override
     protected String doInBackground(String...  strings) {
@@ -49,7 +48,6 @@ class Sending_data extends AsyncTask<String,TextView,String> {
         }
         return inserted;
     }
-
     @Override
     protected void onPostExecute(String s) {
         //Toast.makeText(context, s, Toast.LENGTH_SHORT).show();

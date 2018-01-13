@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorAccent"
+    android:background="#1aa9fd"
     tools:context="com.example.ashi.a1myapplication.AboutUs">
     <!-- TODO: Update blank fragment layout -->
    <ImageView

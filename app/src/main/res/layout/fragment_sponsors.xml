@@ -1,12 +1,36 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context="com.example.ashi.a1myapplication.Sponsors">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Sponsors" />
-</FrameLayout>
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Our Sponsors"
+        android:gravity="center"
+        android:textColor="#000"/>
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:numColumns="2"
+        android:id="@+id/listview">
+    </GridView>
+    </LinearLayout>
+</RelativeLayout>
