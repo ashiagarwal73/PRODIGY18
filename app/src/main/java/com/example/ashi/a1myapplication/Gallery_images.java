@@ -26,20 +26,21 @@ import java.util.concurrent.ExecutionException;
 public class Gallery_images extends AppCompatActivity {
     String image;
     String[] images;
+    String album_nam;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery_images);
         Intent intent=getIntent();
         String album_name=intent.getStringExtra("album");
-        album_name=album_name.replaceAll(" ","%20");
+        album_nam=album_name.replaceAll(" ","%20");
         GridView gridView=findViewById(R.id.gridview1);
         ProgressBar progressBar=findViewById(R.id.progress);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setTitle(album_name);
         if(isOnline()){
         MyAsync2 my = new MyAsync2(Gallery_images.this, progressBar,gridView,null,null);
-        my.execute("http://upesacm.org/ACM_App/images.php?name="+album_name);
+        my.execute("http://upesacm.org/ACM_App/images.php?name="+album_nam);
 ////        try {
 ////            image=my.get();
 ////            images=image.split("#111#");

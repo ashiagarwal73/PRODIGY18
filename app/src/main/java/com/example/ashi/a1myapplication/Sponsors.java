@@ -28,7 +28,7 @@ public class Sponsors extends Fragment {
         progressBar=view.findViewById(R.id.progress);
 //        CustomAdapter4 customadapter4=new CustomAdapter4(getContext(),names,images);
 //        listView.setAdapter(customadapter4);
-        MyAsync my = new MyAsync(getContext(), progressBar,listView,"gallery");
+        MyAsync my = new MyAsync(getContext(), progressBar,listView,"Sponsors");
         my.execute("http://upesacm.org/ACM_App/Sponsor_name.php", "http://upesacm.org/ACM_App/Sponsor_image.php","http://upesacm.org/ACM_App/Album_name.php");
         return view;
     }

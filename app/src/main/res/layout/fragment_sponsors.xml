@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:text="Our Sponsors"
+        android:textStyle="bold"
         android:gravity="center"
         android:textColor="#000"/>
     <GridView

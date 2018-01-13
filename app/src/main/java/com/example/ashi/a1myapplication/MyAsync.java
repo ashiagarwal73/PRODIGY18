@@ -127,6 +127,10 @@ public class MyAsync extends AsyncTask<String,Void,String> {
                         intent.putExtras(b);
                         context.startActivity(intent);
                     }
+                    else
+                    {
+
+                    }
                 }
             });
         }catch (NullPointerException e)
