@@ -1,4 +1,5 @@
 <ScrollView android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout
@@ -8,6 +9,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
+
     tools:context="com.example.ashi.a1myapplication.Membership">
     <TextView
         android:text="Fill the Membership Form"
@@ -176,6 +178,7 @@
             <RadioButton
                 android:text="4 years Premium Membership (₹1200/-)"
                 android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content" />
         </RadioGroup>
 
@@ -183,11 +186,13 @@
     <Button
         android:id="@+id/btn"
         android:text="Submit"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:padding="2dp"
         android:textStyle="bold"
         android:textColor="#000"
-        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="120dp"
         android:layout_height="45dp" />
 
 </LinearLayout>
