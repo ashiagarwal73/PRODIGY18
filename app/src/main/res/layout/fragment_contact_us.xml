@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#03A9F4"
-    tools:context="com.example.ashi.a1myapplication.AboutUs">
+    tools:context="com.agarwal.ashi.prodigy.AboutUs">
     <!-- TODO: Update blank fragment layout-->
     <LinearLayout
         android:layout_width="match_parent"

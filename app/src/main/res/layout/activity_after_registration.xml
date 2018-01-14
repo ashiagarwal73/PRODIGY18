@@ -10,7 +10,7 @@
     android:background="@drawable/background"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.example.ashi.a1myapplication.AfterRegistration">
+    tools:context="com.agarwal.ashi.prodigy.AfterRegistration">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

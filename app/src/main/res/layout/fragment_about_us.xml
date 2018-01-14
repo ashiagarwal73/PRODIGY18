@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#1aa9fd"
-    tools:context="com.example.ashi.a1myapplication.AboutUs">
+    tools:context="com.agarwal.ashi.prodigy.AboutUs">
     <!-- TODO: Update blank fragment layout -->
    <ImageView
        android:id="@+id/about_upes_acm_picture"
