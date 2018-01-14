@@ -21,6 +21,7 @@ public class Gallery_images extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery_images);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent intent=getIntent();
         String album_name=intent.getStringExtra("album");
         album_nam=album_name.replaceAll(" ","%20");
@@ -74,6 +75,10 @@ public class Gallery_images extends AppCompatActivity {
 
             return false;
         }
+        return true;
+    }
+    public boolean onSupportNavigateUp() {
+        this.finish();
         return true;
     }
 }

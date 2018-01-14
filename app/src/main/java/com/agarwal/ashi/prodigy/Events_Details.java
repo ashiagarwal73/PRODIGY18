@@ -31,6 +31,7 @@ public class Events_Details extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events__details);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mViewPager=(ViewPager)findViewById(R.id.poster);
         Intent in=getIntent();
         Bundle b= in.getExtras();
@@ -124,6 +125,9 @@ public class Events_Details extends AppCompatActivity {
         actionBar.setTitle(mDetails.get(mViewPager.getCurrentItem()).getTitle());
         mLayout.setAnchorPoint(0.5f);
         mLayout.setPanelHeight(70);
-
+    }
+    public boolean onSupportNavigateUp() {
+        this.finish();
+        return true;
     }
 }

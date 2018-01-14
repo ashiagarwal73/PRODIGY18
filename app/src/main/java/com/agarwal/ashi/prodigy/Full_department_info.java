@@ -52,6 +52,7 @@ public class Full_department_info extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_department_info);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent intent=getIntent();
         Bundle b=intent.getExtras();
         int position=b.getInt("position",0);
@@ -89,5 +90,9 @@ public class Full_department_info extends AppCompatActivity {
                 return mDetails.size();
             }
         });
+    }
+    public boolean onSupportNavigateUp() {
+        this.finish();
+        return true;
     }
 }

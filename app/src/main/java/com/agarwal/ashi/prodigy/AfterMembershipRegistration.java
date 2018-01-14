@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +26,7 @@ public class AfterMembershipRegistration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_membership_registration);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent intent=getIntent();
         Bundle bun=intent.getExtras();
         name=bun.getString("name");
@@ -107,6 +109,12 @@ public class AfterMembershipRegistration extends AppCompatActivity {
 
             return false;
         }
+        return true;
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        this.finish();
         return true;
     }
 }

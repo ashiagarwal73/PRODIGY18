@@ -25,6 +25,7 @@ public class AfterRegistration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_registration);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent intent=getIntent();
         Bundle b=intent.getExtras();
         fullname=b.getString("name");
@@ -112,6 +113,10 @@ public class AfterRegistration extends AppCompatActivity {
 
             return false;
         }
+        return true;
+    }
+    public boolean onSupportNavigateUp() {
+        this.finish();
         return true;
     }
 }

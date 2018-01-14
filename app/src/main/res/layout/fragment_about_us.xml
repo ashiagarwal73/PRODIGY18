@@ -30,7 +30,7 @@
               android:textSize="22sp"
               android:layout_gravity="center"
               android:background="#7ac227"
-              android:text="Where It All Begins"/>
+              android:text="About Prodigy"/>
 
       </LinearLayout>
       <LinearLayout
@@ -43,11 +43,11 @@
              android:textStyle="bold"
              android:lineSpacingExtra="4dp"
              android:textColor="#FFF"
-             android:height="130dp"
              android:padding="10dp"
              android:background="#7ac227"
-             android:text="The ACM student chapter at UPES, Dehradun, India is a unique amalgamation of aspiration, hard work and productive work structure. With members dedicated towards achieving perfection, sincerity is an imbibed trait."
-             />
+             android:text="Prodigy is the annual technical festival organized by UPES ACM and ACM Women Student Chapters that sees participant by over 400 students every year. Through this festival, the chapters strive to create interest and enthusiasm among students for innovation and creativity in the field of information technology. Participants are expected from all over India, and from a majority of colleges within Dehradun.
+Prodigy'18 comes with an adventurous and buzzing theme, Celebration of Engineering Worldwide, encompassing within itself a wide variety of technical events and workshops. The technical fest is going to be a splendid one this time because it has several exciting events with a blend of fun and fear making the intellectuals taste the flavor of high edged competition.
+" />
       </LinearLayout>
       <LinearLayout
         android:layout_width="wrap_content"
@@ -83,8 +83,8 @@
           android:layout_height="wrap_content">
           <ImageView
               android:id="@+id/wisdom"
-              android:layout_width="match_parent"
-              android:layout_height="285dp"
+              android:layout_width="500dp"
+              android:layout_height="400dp"
               android:background="@drawable/wisdom"/>
         </LinearLayout>
         <LinearLayout
