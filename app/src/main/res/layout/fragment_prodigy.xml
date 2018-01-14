@@ -21,6 +21,7 @@
         android:horizontalSpacing="10dp"
         android:verticalSpacing="10dp"
         android:padding="5dp"
+        android:visibility="visible"
         android:id="@+id/gridview">
     </GridView>
 </RelativeLayout>

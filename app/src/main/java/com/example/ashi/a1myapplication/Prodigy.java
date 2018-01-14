@@ -22,12 +22,12 @@ public class Prodigy extends Fragment {
         if (mListener != null) {
             mListener.onFragmentInteraction("Prodigy 18");
         }
-        View view=inflater.inflate(R.layout.fragment_prodigy, container, false);
-        GridView gridView = view.findViewById(R.id.gridview);
-        ProgressBar progressBar = view.findViewById(R.id.progress);
+        View view1=inflater.inflate(R.layout.fragment_prodigy, container, false);
+        GridView gridView = view1.findViewById(R.id.gridview);
+        ProgressBar progressBar = view1.findViewById(R.id.progress);
             MyAsync my = new MyAsync(getContext(), progressBar, gridView,"prodigy");
             my.execute("http://upesacm.org/ACM_App/Event_name.php", "http://upesacm.org/ACM_App/poster.php","http://upesacm.org/ACM_App/Event_desc.php");
-        return view;
+            return view1;
     }
     // TODO: Rename method, update argument and hook method into UI event
     @Override
