@@ -3,129 +3,165 @@
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#1aa9fd"
-    tools:context="com.agarwal.ashi.prodigy.AboutUs">
-    <!-- TODO: Update blank fragment layout -->
-   <ImageView
-       android:id="@+id/about_upes_acm_picture"
-       android:layout_width="match_parent"
-       android:layout_height="170dp"
-       android:background="@drawable/about_acm_final1"/>
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
-          <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:id="@+id/heading"
-              android:textColor="#FFF"
-              android:textStyle="bold"
-              android:padding="10dp"
-              android:fontFamily="sans-serif-smallcaps"
-              android:textSize="22sp"
-              android:layout_gravity="center"
-              android:background="#7ac227"
-              android:text="About Prodigy"/>
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#1aa9fd"
+        tools:context="com.example.ashi.a1myapplication.AboutUs">
+        <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:id="@+id/about_upes_acm_picture"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/about_acm_final1"/>
 
-      </LinearLayout>
-      <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="match_parent">
-         <TextView
-             android:id="@+id/starting"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:textStyle="bold"
-             android:lineSpacingExtra="4dp"
-             android:textColor="#FFF"
-             android:padding="10dp"
-             android:background="#7ac227"
-             android:text="Prodigy is the annual technical festival organized by UPES ACM and ACM Women Student Chapters that sees participant by over 400 students every year. Through this festival, the chapters strive to create interest and enthusiasm among students for innovation and creativity in the field of information technology. Participants are expected from all over India, and from a majority of colleges within Dehradun.
-Prodigy'18 comes with an adventurous and buzzing theme, Celebration of Engineering Worldwide, encompassing within itself a wide variety of technical events and workshops. The technical fest is going to be a splendid one this time because it has several exciting events with a blend of fun and fear making the intellectuals taste the flavor of high edged competition.
-" />
-      </LinearLayout>
-      <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-          <TextView
-              android:id="@+id/a_humble_beginning"
-              android:layout_width="wrap_content"
-              android:layout_height="50sp"
-              android:fontFamily="sans-serif-smallcaps"
-              android:padding="10dp"
-              android:text="@string/from_humble_beginning"
-              android:textColor="#FFF"
-              android:textSize="22sp"
-              android:textStyle="bold" />
-      </LinearLayout>
-      <LinearLayout
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="210dp"
-             android:id="@+id/more_about"
-             android:textStyle="bold"
-             android:padding="10dp"
-             android:textColor="#FFF"
-             android:text="UPES-ACM Student Chapter started its activity from April 2010 by organizing a Poster Presentation competition on the theme ‘IT Applications in Energy Sectors’. We also organized Paper Presentation competition on “Green Computing” besides community program in the year 2010 and 2011 for Computer Awareness. We participated in this program and taught computer skills to students from nearby village schools organized by Corporate Social Responsibility cell of the University."/>
-      </LinearLayout>
         <LinearLayout
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content">
-          <ImageView
-              android:id="@+id/wisdom"
-              android:layout_width="500dp"
-              android:layout_height="400dp"
-              android:background="@drawable/wisdom"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/About_prodigy"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:text="About Prodigy"
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/prodigy_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text="Prodigy is the annual technical festival organized by UPES ACM and ACM Women Student Chapters that sees participant by over 400 students every year. Through this festival, the chapters strive to create interest and enthusiasm among students for innovation and creativity in the field of information technology. Participants are expected from all over India, and from a majority of colleges within Dehradun.
+              Prodigy'18 comes with an adventurous and buzzing theme, Celebration of Engineering Worldwide, encompassing within itself a wide variety of technical events and workshops. The technical fest is going to be a splendid one this time because it has several exciting events with a blend of fun and fear making the intellectuals taste the flavor of high edged competition."
+                android:textColor="#ECEFF1"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/heading"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:background="#7ac227"
+                android:text="Where It All Begins"/>
+
         </LinearLayout>
         <LinearLayout
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content">
-         <ImageView
-             android:id="@+id/balance"
-             android:layout_width="wrap_content"
-             android:layout_height="250dp"
-             android:background="@drawable/balance"/>
-       </LinearLayout>
-
-       <LinearLayout
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content">
-
-         <ImageView
-             android:id="@+id/community"
-             android:layout_width="wrap_content"
-             android:layout_height="300dp"
-             android:background="@drawable/community2" />
-       </LinearLayout>
-       <LinearLayout
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content">
-         <ImageView
-             android:id="@+id/duty"
-             android:layout_width="wrap_content"
-             android:layout_height="280dp"
-             android:background="@drawable/duty"/>
-       </LinearLayout>
-       <LinearLayout
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content">
-         <ImageView
-             android:layout_width="wrap_content"
-             android:layout_height="240dp"
-             android:id="@+id/eye"
-             android:background="@drawable/eye"/>
-       </LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/starting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:lineSpacingExtra="4dp"
+                android:textColor="#FFF"
+                android:height="130dp"
+                android:padding="10dp"
+                android:background="#7ac227"
+                android:text="The ACM student chapter at UPES, Dehradun, India is a unique amalgamation of aspiration, hard work and productive work structure. With members dedicated towards achieving perfection, sincerity is an imbibed trait."
+                />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/a_humble_beginning"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
+                android:text="From Humble Beginnings"
+                android:textColor="#FFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/more_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:padding="10dp"
+                android:text="UPES-ACM Student Chapter started its activity from April 2010 by organizing a Poster Presentation competition on the theme ‘IT Applications in Energy Sectors’. We also organized Paper Presentation competition on “Green Computing” besides community program in the year 2010 and 2011 for Computer Awareness. We participated in this program and taught computer skills to students from nearby village schools organized by Corporate Social Responsibility cell of the University."
+                android:textColor="#ECEFF1"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/wisdom"
+                android:layout_width="600dp"
+                android:layout_height="400dp"
+                android:background="@drawable/wisdom"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@drawable/balance"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/community"
+                android:layout_width="wrap_content"
+                android:layout_height="390dp"
+                android:background="@drawable/community2" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/duty"
+                android:layout_width="wrap_content"
+                android:layout_height="280dp"
+                android:background="@drawable/duty"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:id="@+id/eye"
+                android:background="@drawable/eye"/>
+        </LinearLayout>
+    </LinearLayout>
 </ScrollView>
-
-
