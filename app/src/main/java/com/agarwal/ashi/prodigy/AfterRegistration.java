@@ -40,9 +40,6 @@ public class AfterRegistration extends AppCompatActivity {
         email=b.getString("email");
         semester=b.getString("sem");
         events=b.getString("eve");
-        //counter=b.getInt("counter");
-        //int temp=counter;
-        //arrayofevents=b.getStringArrayList("events");
         String amountacm=b.getString("amounta");
         String amountnacm=b.getString("amountn");
         acm=b.getString("acm");
@@ -99,7 +96,6 @@ public class AfterRegistration extends AppCompatActivity {
                     }
                 }
             });
-
         }
     }
     public boolean isOnline() {

@@ -44,7 +44,7 @@
         android:textColor="#000"
         android:textSize="18sp"
         android:layout_marginTop="20dp"
-        android:text="Enter your Transaction id,to Confirm your Registration !"/>
+        android:text="Come Back! Enter your Transaction Id,to Confirm your Registration ."/>
     <EditText
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
@@ -82,9 +82,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textColor="#003af7"
+        android:textColor="#f9fafc"
         android:textSize="18sp"
-        android:text="+91 8279825702"/>
+        android:textStyle="bold"
+        android:text="+91 8957212220"/>
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"

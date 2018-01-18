@@ -26,7 +26,7 @@
                 android:id="@+id/About_prodigy"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="6dp"
+                android:padding="10dp"
                 android:text="About Prodigy"
                 android:textSize="22sp"
                 android:textColor="#fff"
@@ -44,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:lineSpacingExtra="5dp"
+                android:padding="10dp"
                 android:text="Prodigy is the annual technical festival organized by UPES ACM and ACM Women Student Chapters that sees participant by over 400 students every year. Through this festival, the chapters strive to create interest and enthusiasm among students for innovation and creativity in the field of information technology. Participants are expected from all over India, and from a majority of colleges within Dehradun.
               Prodigy'18 comes with an adventurous and buzzing theme, Celebration of Engineering Worldwide, encompassing within itself a wide variety of technical events and workshops. The technical fest is going to be a splendid one this time because it has several exciting events with a blend of fun and fear making the intellectuals taste the flavor of high edged competition."
                 android:textColor="#ECEFF1"

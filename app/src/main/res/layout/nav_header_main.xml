@@ -16,20 +16,28 @@
         android:id="@+id/imageView"
         android:layout_width="72dp"
         android:layout_height="77dp"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@mipmap/acmlogo" />
+        app:srcCompat="@drawable/icon" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="UPES"
+        android:textSize="16sp"
+        android:text="UPES ACM/ACM-W Presents"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ACM/ACM-W" />
-
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:text="Prodigy 18" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:textColor="#fff"
+        android:text="1st-2nd Feburary 2018" />
 </LinearLayout>

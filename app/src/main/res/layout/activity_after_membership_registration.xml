@@ -75,9 +75,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:textColor="#043bf2"
+                android:textColor="#e8eaf1"
                 android:textSize="18sp"
-                android:text="+91 8279825702"/>
+                android:text="+91 8957212220"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"

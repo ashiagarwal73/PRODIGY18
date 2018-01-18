@@ -34,7 +34,7 @@ public class Register extends Fragment {
     int d;
     String acm;
     Spinner semester;
-    CheckBox icl,enngage,ctf,frameofreference,glitch,tunningfork,travellingsalesman,braillecode,echo,googleworkshop,intelworkshop;
+    CheckBox icl,enngage,ctf,frameofreference,glitch,tunningfork,travellingsalesman,braillecode,echo,googleworkshop,intelworkshop,tomclancy;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -52,6 +52,7 @@ public class Register extends Fragment {
        // events=view.findViewById(R.id.event);
         icl=view.findViewById(R.id.icl);
         enngage=view.findViewById(R.id.enggage);
+        tomclancy=view.findViewById(R.id.enggagetom);
         ctf=view.findViewById(R.id.ctf);
         frameofreference=view.findViewById(R.id.frameofreference);
         glitch=view.findViewById(R.id.glitch);
@@ -82,122 +83,7 @@ public class Register extends Fragment {
 
             }
         });
-//        icl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//            if(icl.isChecked())
-//            {
-//                events.add(icl.getText().toString());
-//            }
-//            }
-//        });
-//        enngage.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(enngage.isChecked()){
-//                events.add(enngage.getText().toString());}
-//            }
-//        });
-//        ctf.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(ctf.isChecked()){
-//                events.add(ctf.getText().toString());
-//            }}
-//        });
-//        frameofreference.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(frameofreference.isChecked())
-//                {
-//                    events.add(frameofreference.getText().toString());
-//                }
-//            }
-//        });
-//        glitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(glitch.isChecked())
-//                {
-//                    events.add(glitch.getText().toString());
-//                }
-//            }
-//        });
-//        tunningfork.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(tunningfork.isChecked())
-//                {
-//                    events.add(tunningfork.getText().toString());
-//                }
-//            }
-//        });
-//        travellingsalesman.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(travellingsalesman.isChecked()){
-//                    events.add(travellingsalesman.getText().toString());
-//                }
-//            }
-//        });
-//        braillecode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(braillecode.isChecked()){
-//                    events.add(braillecode.getText().toString());
-//                }
-//            }
-//        });
-//        echo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(echo.isChecked()){
-//                    events.add(echo.getText().toString());
-//                }
-//            }
-//        });
-//        googleworkshop.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(googleworkshop.isChecked())
-//                {
-//                    events.add(googleworkshop.getText().toString());
-//                }
-//            }
-//        });
-//        intelworkshop.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(intelworkshop.isChecked())
-//                {
-//                    events.add(intelworkshop.getText().toString());
-//                }
-//            }
-//        });
-//        MyAsync2 my=new MyAsync2(getContext(),null,null,events,null);
-//        my.execute("http://upesacm.org/ACM_App/Event_name.php");
-//        int length=listVOs.size();
-//        String string[]=new String[length];
-//        for (int i=0;i<length;i++)
-//        {
-//            if(listVOs.get(i).isSelected())
-//            {
-//                string[i]=listVOs.get(i).getTitle();
-//                Toast.makeText(getContext(), string[0], Toast.LENGTH_SHORT).show();
-//            }
-//        }
-        //Toast.makeText(getContext(), string[0], Toast.LENGTH_SHORT).show();
-//        events.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-//                str2 = adapterView.getItemAtPosition(i).toString();
-//                d= i;
-//            }
-//            @Override
-//            public void onNothingSelected(AdapterView<?> adapterView) {
 //
-//            }
-//        });
         submit=view.findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -228,25 +114,31 @@ public class Register extends Fragment {
                     int B=0;
                     if(icl.isChecked()){
                         events.add(icl.getText().toString());
-                        amountacm=amountacm+80;
+                        amountacm=amountacm+100;
                         amountnacm=amountnacm+100;
                     }
                     if(enngage.isChecked())
                     {
                         events.add(enngage.getText().toString());
-                        amountacm=amountacm+80;
+                        amountacm=amountacm+100;
                         amountnacm=amountnacm+100;
+                    }
+                    if(tomclancy.isChecked())
+                    {
+                        events.add(tomclancy.getText().toString());
+                        amountacm=amountacm+300;
+                        amountnacm=amountnacm+300;
                     }
                     if(ctf.isChecked())
                     {
                         events.add(ctf.getText().toString());
-                        amountacm=amountacm+80;
+                        amountacm=amountacm+100;
                         amountnacm=amountnacm+100;
                     }
                     if(frameofreference.isChecked())
                     {
                         events.add(frameofreference.getText().toString());
-                        amountacm=amountacm+80;
+                        amountacm=amountacm+100;
                         amountnacm=amountnacm+100;
                     }
                     if(glitch.isChecked())
@@ -295,8 +187,8 @@ public class Register extends Fragment {
                     }
                     if(B>=3)
                     {
-                        amountnacm=amountnacm-B*10;
-                        amountacm=amountacm-B*10+10;
+                        amountnacm=amountnacm-20;
+                        amountacm=amountacm-30;
                     }
                 Intent intent=new Intent(getActivity(),AfterRegistration.class);
                 Bundle b=new Bundle();
@@ -345,5 +237,6 @@ public class Register extends Fragment {
     }
     boolean isEmailValid(CharSequence email) {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email)
-                .matches();}
+                .matches();
+    }
 }
