@@ -176,8 +176,8 @@ public class Register extends Fragment {
                     if(googleworkshop.isChecked())
                     {
                         events.add(googleworkshop.getText().toString());
-                        amountacm=amountacm+100;
-                        amountnacm=amountnacm+100;
+                        amountacm=amountacm+50;
+                        amountnacm=amountnacm+50;
                     }
                     if(intelworkshop.isChecked())
                     {
