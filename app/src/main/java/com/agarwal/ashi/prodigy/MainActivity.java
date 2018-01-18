@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setCheckedItem(R.id.prodigy);
         //NOTE:  Open fragment1 initially.
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frames, new Prodigy());
+            ft.replace(R.id.frames, new Prodigy());
         ft.commit();
     }
     }
@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Fragment fragment = null;
-
         if (id == R.id.aboutus) {
             fragment=new AboutUs();
 

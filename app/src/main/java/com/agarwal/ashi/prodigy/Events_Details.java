@@ -25,7 +25,7 @@ public class Events_Details extends AppCompatActivity {
     List<Details> mDetails = new ArrayList<>();
     Details[] details=new Details[200];
     private SlidingUpPanelLayout mLayout;
-    Button register;
+    Thread myThread;
     int pos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +119,25 @@ public class Events_Details extends AppCompatActivity {
 
             }
         });
+        myThread = new Thread()
+        {
+            @Override
+            public void run()
+            {
+                try
+                {
+                    sleep(500);
+                    mLayout.setPanelState(SlidingUpPanelLayout.PanelState.ANCHORED);
+
+                }
+                catch(Exception ex)
+                {
+                    ex.printStackTrace();
+                }
+
+            }
+        };
+        myThread.start();
         TextView t = (TextView) findViewById(R.id.name);
         t.setText("Slide up to View more Details");
         ActionBar actionBar=getSupportActionBar();

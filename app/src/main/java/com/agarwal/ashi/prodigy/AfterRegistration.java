@@ -15,11 +15,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class AfterRegistration extends AppCompatActivity {
     String fullname,branch,sapid,phone,email,semester,events,acm;
     Button pay,submit;
     String event_name;
     TextView amount;
+    int sum=0;
+    int counter;
+    ArrayList<String> arrayofevents=new ArrayList<>();
     EditText transaction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,11 @@ public class AfterRegistration extends AppCompatActivity {
         email=b.getString("email");
         semester=b.getString("sem");
         events=b.getString("eve");
+        //counter=b.getInt("counter");
+        //int temp=counter;
+        //arrayofevents=b.getStringArrayList("events");
+        String amountacm=b.getString("amounta");
+        String amountnacm=b.getString("amountn");
         acm=b.getString("acm");
         pay=findViewById(R.id.pay);
         amount=findViewById(R.id.amount);
@@ -45,14 +55,13 @@ public class AfterRegistration extends AppCompatActivity {
             event_name=events.replaceAll(" ","%20");
             if(acm.equals("ACM Member"))
             {
-                MyAsync2 my=new MyAsync2(AfterRegistration.this,null,null,null,amount);
-                my.execute("http://upesacm.org/ACM_App/Event_cost_acm.php?name="+event_name);
-
+                amount.setText(amountacm);
             }
             else
             {
-                MyAsync2 my=new MyAsync2(AfterRegistration.this,null,null,null,amount);
-                my.execute("http://upesacm.org/ACM_App/Event_cost_nacm.php?name="+event_name);
+                amount.setText(amountnacm);
+//                MyAsync2 my=new MyAsync2(AfterRegistration.this,null,null,null,amount);
+//                my.execute("http://upesacm.org/ACM_App/Event_cost_nacm.php?name="+event_name);
 
             }
             pay.setOnClickListener(new View.OnClickListener() {

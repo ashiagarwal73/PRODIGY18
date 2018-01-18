@@ -17,6 +17,7 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by Ashi on 04-01-2018.
@@ -32,7 +33,8 @@ public class MyAsync2 extends AsyncTask<String,Void,String> {
     String output2="Choose the event#111#";
     ProgressBar progressBar;
     //TextView textView;
-    public MyAsync2(Context context, ProgressBar progressBar, GridView gridView, Spinner spinner, TextView textView)
+     //ArrayList<StateVO> listVOs = new ArrayList<>();
+    public MyAsync2(Context context, ProgressBar progressBar, GridView gridView, Spinner spinner, TextView textView/*,ArrayList<StateVO> listVOs*/)
     {
         this.context=context;
         if(gridView!=null)
@@ -48,6 +50,10 @@ public class MyAsync2 extends AsyncTask<String,Void,String> {
         {
             this.textView=textView;
         }
+//        if(listVOs!=null)
+//        {
+//            this.listVOs=listVOs;
+//        }
     }
     @Override
     protected void onPreExecute() {
@@ -112,12 +118,22 @@ public class MyAsync2 extends AsyncTask<String,Void,String> {
             output1 = output2.split("#111#");
             ArrayAdapter<String> aa = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_dropdown_item, output1);
             spinner.setAdapter(aa);
+
+////
+////            for (int i = 0; i < output1.length; i++) {
+////                StateVO stateVO = new StateVO();
+////                stateVO.setTitle(output1[i]);
+////                stateVO.setSelected(false);
+////                listVOs.add(stateVO);
+////            }
+////            MyAdapter myAdapter = new MyAdapter(context, 0, listVOs);
+//            spinner.setAdapter(myAdapter);
         }
         if(textView!=null)
         {
-            String str=textView.getText().toString();
-            str=str.concat(s);
-            textView.setText(str);
+            //String str=textView.getText().toString();
+            //str=str.concat(s);
+            textView.setText(s);
         }
     }
 }
