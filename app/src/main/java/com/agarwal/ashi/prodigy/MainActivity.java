@@ -39,7 +39,37 @@ public class MainActivity extends AppCompatActivity
         {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+            navigationView.setNavigationItemSelectedListener(this);
+        Intent in=getIntent();
+        String str=in.getStringExtra("your_condition");
+        String s="r";
+        if(str==null)
+        {
+            str="e";
+            //NOTE:  Checks first item in the navigation drawer initially
+            navigationView.setCheckedItem(R.id.prodigy);
+            //NOTE:  Open fragment1 initially.
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frames, new Prodigy());
+            ft.commit();
+        }
+        if(str.equals(s))
+        {
+            //NOTE:  Checks first item in the navigation drawer initially
+            navigationView.setCheckedItem(R.id.register);
+            //NOTE:  Open fragment1 initially.
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frames, new Register());
+            ft.commit();
+        }
+        else {
+            navigationView.setCheckedItem(R.id.prodigy);
+            //NOTE:  Open fragment1 initially.
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frames, new Prodigy());
+            ft.commit();
+        }
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -56,14 +86,14 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        //NOTE:  Checks first item in the navigation drawer initially
-        navigationView.setCheckedItem(R.id.prodigy);
-        //NOTE:  Open fragment1 initially.
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.frames, new Prodigy());
-        ft.commit();
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
+//        //NOTE:  Checks first item in the navigation drawer initially
+//        navigationView.setCheckedItem(R.id.prodigy);
+//        //NOTE:  Open fragment1 initially.
+//        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//            ft.replace(R.id.frames, new Prodigy());
+//        ft.commit();
     }
     }
     @SuppressWarnings("StatementWithEmptyBody")
@@ -115,6 +145,10 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().setTitle(title);
     }
     public void onBackPressed() {
+        Fragment fragment=new Prodigy();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frames, fragment);
+        ft.commit();
         AlertDialog.Builder b=new AlertDialog.Builder(MainActivity.this);
         b.setTitle("Close Application!");
         b.setMessage("Do you Really want to close the App?");

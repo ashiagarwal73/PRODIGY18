@@ -227,27 +227,31 @@ REFERENCE"
             android:id="@+id/echo"/>
     </LinearLayout>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Workshops"
-            android:textStyle="bold"
-            android:textColor="#000"/>
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="GOOGLE PERSPECTIVE"
-            android:id="@+id/googleworkshop"/>
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="INTEL WORKSHOP"
-            android:id="@+id/intelworkshop"/>
-    </LinearLayout>
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:text="Registration Amount-"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:text="Category A:    ACM-₹40/-Per Person  Non-ACM-₹50/-Per Person"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:text="Category B:  ₹100/- Per Person"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:text="Tom Clancy's:  ₹300/- Per Team"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

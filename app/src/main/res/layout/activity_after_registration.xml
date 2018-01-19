@@ -29,6 +29,7 @@
         android:textSize="18sp"
         android:layout_marginTop="10dp"
         android:textColor="#003bf9"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,6 +39,24 @@
             android:layout_marginTop="10dp"
             android:textColor="#003bf9"/>
     </LinearLayout>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/radiogroup2"
+        android:orientation="horizontal">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radiobuttoncash"
+        android:text="Cash on Desk"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radiobuttonpaytm"
+        android:text="Paytm"/>
+    </RadioGroup>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

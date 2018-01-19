@@ -27,7 +27,7 @@ public class AfterMembershipRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_membership_registration);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Intent intent=getIntent();
+        final Intent intent=getIntent();
         Bundle bun=intent.getExtras();
         name=bun.getString("name");
         branch=bun.getString("branch");
@@ -79,6 +79,7 @@ public class AfterMembershipRegistration extends AppCompatActivity {
                                         Sending_data sending_data = new Sending_data(AfterMembershipRegistration.this, "false");
                                         sending_data.execute("http://upesacm.org/ACM_App/MembershipDetails.php?name=" + name + "&branch=" + branch + "&semester=" + semester + "&sapId=" + sapId + "&contact=" + contact + "&email=" + email+"&time="+acm.replaceAll(" ","+")+"&transaction="+transaction.getText().toString());
                                         Intent intent1=new Intent(AfterMembershipRegistration.this,MainActivity.class);
+                                        intent1.putExtra("your_condition", "o");
                                         startActivity(intent1);
                                     }
                                 }

@@ -34,7 +34,7 @@ public class Register extends Fragment {
     int d;
     String acm;
     Spinner semester;
-    CheckBox icl,enngage,ctf,frameofreference,glitch,tunningfork,travellingsalesman,braillecode,echo,googleworkshop,intelworkshop,tomclancy;
+    CheckBox icl,enngage,ctf,frameofreference,glitch,tunningfork,travellingsalesman,braillecode,echo,tomclancy;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -60,8 +60,6 @@ public class Register extends Fragment {
         travellingsalesman=view.findViewById(R.id.travellingsalesman);
         braillecode=view.findViewById(R.id.braillecode);
         echo=view.findViewById(R.id.echo);
-        googleworkshop=view.findViewById(R.id.googleworkshop);
-        intelworkshop=view.findViewById(R.id.intelworkshop);
         radioGroup=view.findViewById(R.id.radiogroup);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -172,18 +170,6 @@ public class Register extends Fragment {
                         amountacm=amountacm+40;
                         amountnacm=amountnacm+50;
                         B++;
-                    }
-                    if(googleworkshop.isChecked())
-                    {
-                        events.add(googleworkshop.getText().toString());
-                        amountacm=amountacm+50;
-                        amountnacm=amountnacm+50;
-                    }
-                    if(intelworkshop.isChecked())
-                    {
-                        events.add(intelworkshop.getText().toString());
-                        amountacm=amountacm+300;
-                        amountnacm=amountnacm+300;
                     }
                     if(B>=3)
                     {

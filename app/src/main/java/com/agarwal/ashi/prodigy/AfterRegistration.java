@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,9 +24,11 @@ public class AfterRegistration extends AppCompatActivity {
     Button pay,submit;
     String event_name;
     TextView amount;
-    int sum=0;
-    int counter;
-    ArrayList<String> arrayofevents=new ArrayList<>();
+    RadioGroup radioGroup;
+    String paymode;
+//    int sum=0;
+//    int counter;
+//    ArrayList<String> arrayofevents=new ArrayList<>();
     EditText transaction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,14 @@ public class AfterRegistration extends AppCompatActivity {
         amount=findViewById(R.id.amount);
         submit=findViewById(R.id.submit);
         transaction=findViewById(R.id.transaction);
+        radioGroup=findViewById(R.id.radiogroup2);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radioButton=findViewById(checkedId);
+                paymode=radioButton.getText().toString();
+            }
+        });
         if(isOnline())
         {
             event_name=events.replaceAll(" ","%20");
@@ -86,9 +98,10 @@ public class AfterRegistration extends AppCompatActivity {
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         //Toast.makeText(AfterRegistration.this, "All Details Submitted Successfully", Toast.LENGTH_LONG).show();
                                         Sending_data sending_data=new Sending_data(AfterRegistration.this,"false");
-                                        String url="http://upesacm.org/ACM_App/Register_details.php?name="+fullname+"&branch="+branch+"&sapid="+sapid+"&phone="+phone+"&email="+email+"&semester="+semester+"&event="+events+"&acm="+acm+"&transaction="+transaction.getText().toString();
+                                        String url="http://upesacm.org/ACM_App/Register_details.php?name="+fullname+"&branch="+branch+"&sapid="+sapid+"&phone="+phone+"&email="+email+"&semester="+semester+"&event="+events+"&acm="+acm+"&amount="+amount.getText().toString()+"&paymode="+paymode+"&transaction="+transaction.getText().toString();
                                         sending_data.execute(url.replaceAll(" ","+"));
                                         Intent intent1=new Intent(AfterRegistration.this,MainActivity.class);
+                                        intent1.putExtra("your_condition", "o");
                                         startActivity(intent1);
                                     }
                                 }

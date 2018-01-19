@@ -26,6 +26,7 @@ public class Events_Details extends AppCompatActivity {
     Details[] details=new Details[200];
     private SlidingUpPanelLayout mLayout;
     Thread myThread;
+    Button register;
     int pos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class Events_Details extends AppCompatActivity {
         setContentView(R.layout.activity_events__details);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mViewPager=(ViewPager)findViewById(R.id.poster);
+        register=findViewById(R.id.register);
         Intent in=getIntent();
         Bundle b= in.getExtras();
         final String[] images=b.getStringArray("images");
@@ -137,6 +139,14 @@ public class Events_Details extends AppCompatActivity {
 
             }
         };
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Events_Details.this,MainActivity.class);
+                i.putExtra("your_condition", "r");
+                startActivity(i);
+            }
+        });
         myThread.start();
         TextView t = (TextView) findViewById(R.id.name);
         t.setText("Slide up to View more Details");

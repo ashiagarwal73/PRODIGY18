@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/PRODIGY'18.iml" filepath="$PROJECT_DIR$/PRODIGY'18.iml" />
       <module fileurl="file://C:\Users\Nakul\AndroidStudioProjects\PRODIGY18\PRODIGY'18.iml" filepath="C:\Users\Nakul\AndroidStudioProjects\PRODIGY18\PRODIGY'18.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/PRODIGY18.iml" filepath="$PROJECT_DIR$/.idea/PRODIGY18.iml" />
+      <module fileurl="file://F:\AndroidStudioProjects\PRODIGY'18\.idea\PRODIGY18.iml" filepath="F:\AndroidStudioProjects\PRODIGY'18\.idea\PRODIGY18.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

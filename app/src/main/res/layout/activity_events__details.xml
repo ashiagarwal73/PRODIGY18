@@ -11,6 +11,7 @@
     sothree:umanoParallaxOffset="100dp"
     sothree:umanoDragView="@+id/dragView"
     sothree:umanoOverlay="true"
+    android:background="@drawable/background"
     sothree:umanoScrollableView="@+id/list">
 
     <!-- MAIN CONTENT -->
@@ -51,13 +52,20 @@
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="300dp"
             android:textSize="18sp"
             android:textColor="#000"
             android:padding="10dp"
             android:layout_weight="1"
             >
         </ListView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/register"/>
         <!--<ScrollView-->
         <!--android:id="@+id/sv"-->
         <!--android:layout_width="match_parent"-->
